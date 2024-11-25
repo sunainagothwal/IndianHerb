@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Herbs</title>
+    <link rel="stylesheet" href="css/data.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_file">
+            <input type="text" placeholder="search this site" alt="text" class="text" />
+            <img src="images/logo.png" alt="logo" class="logo" />
+            <div class="account_wishlist">
+                <span class="header_link" id="myAccountLink"><i class="fa-solid fa-user"></i> My
+                    Account</span>
+                <span class="header_link" id="Wishlist"><i class="fa-solid fa-heart"></i> Wishlist</span>
+                <div id="modal"></div>
+                <div id="accountModal">
+                    <div id="loginForm">
+                        <h2>Login</h2>
+                        <div class="form">
+                            <label for="loginEmail">Email:</label>
+                            <input type="email" id="loginEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="form">
+                            <label for="loginPassword">Password:</label>
+                            <input type="password" id="loginPassword" placeholder="Enter your password">
+                        </div>
+                        <div class="form">
+                            <button id="loginButton">Login</button>
+                        </div>
+                        <span class="toggle" id="showSignUp">Don't have an account? Sign Up</span>
+                    </div>
+                    <div id="signUpForm" style="display: none;">
+                        <h2>Sign Up</h2>
+                        <div class="form">
+                            <label for="signUpEmail">Email:</label>
+                            <input type="email" id="signUpEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="form">
+                            <label for="signUpPassword">Password:</label>
+                            <input type="password" id="signUpPassword" placeholder="Enter your password">
+                        </div>
+                        <div class="form">
+                            <button id="signUpButton">Sign Up</button>
+                        </div>
+                        <span class="toggle" id="showLogin">Already have an account? Login</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <a href="#Home"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#Aboutus"><i class="fa-solid fa-circle-info"></i> About Us</a>
+                <a href="#Shop"><i class="fa-solid fa-bag-shopping"></i> Shop</a>
+                <a href="#Contactus"><i class="fa-solid fa-id-badge"></i> Contact Us</a>
+                <a href="#cart" class="cart" onclick="toggleCont(event)"> Cart
+                    <div class="cartCont"> <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart_count">0</span>
+                    </div>
+                </a>
+            </ul>
+        </nav>
+
+        <div class="cont">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head">
+                    <p>My Cart</p>
+                </div>
+                <div id="cart_items" class="cart_items_cont"></div>
+                <hr />
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h3 id="total"> ₹ 0.00</h3>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="herb" id="Home">
+        <div class="container">
+            <h1>Discover the Richness of Indian Herbs and Spices</h1>
+            <a href="#Shop" class="button">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="Aboutus" id="Aboutus">
+        <div class="about_us_text">
+            <h2>About Us</h2>
+            <p>Welcome to Indian Herbs, where we bring the rich, authentic flavors of India directly to your
+                kitchen.
+                Our
+                passion for traditional Indian herbs and spices drives us to source the finest ingredients,
+                ensuring
+                that
+                every product is of the highest quality.</p>
+            <div class="divimg">
+                <img src="images/aboutus.png" alt="Our Team">
+            </div>
+
+            <p>Founded with the mission to celebrate the rich culinary heritage of India, we are dedicated to
+                providing
+                our
+                customers with exceptional products that enhance their cooking experience. From exotic spices to
+                rare
+                herbs,
+                we carefully select and curate our offerings to bring the essence of India to your home.</p>
+            <p>At Indian Herbs, we believe in quality, sustainability, and tradition. Our team works closely
+                with
+                farmers
+                and suppliers to ensure ethical sourcing and environmentally friendly practices. We are
+                committed to
+                preserving the authenticity of our products while promoting a healthier and more flavorful way
+                of life.
+            </p>
+        </div>
+    </section>
+
+    <section class="products" id="products_list">
+        <section id="Shop"></section>
+    </section>
+
+
+
+    <section class="contact" id="Contactus">
+        <h2>Contact Us</h2>
+        <div class="info">
+            <div class="contact_info">
+                <h3>Our Contact Information</h3>
+                <p><img src="images/mail.png" class="png_file" />
+                    <strong>Email:</strong> support@shoppingwebsite.com
+                </p>
+                <p><img src="images/phone.png" class="png_file" />
+                    <strong>Phone:</strong> +91 0123456789
+                </p>
+                <p><img src="images/address.png" class="png_file" />
+                    <strong>Address:</strong> ABC Shopping Shop 123 Street
+                </p>
+            </div>
+            <div class="form_group">
+                <form action="submit">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_container">
+            <div class="footer_content">
+                <h2>Follow Us</h2>
+                <nav class="social">
+                    <a href="https://facebook.com/yourpage" target="_blank" class="social_link">
+                        <img src="images/faacebook.png" alt="Facebook logo" class="social_icon" /> Facebook
+                    </a>
+                    <a href="https://twitter.com/yourpage" target="_blank" class="social_link">
+                        <img src="images/twitter.png" alt="Twitter logo" class="social_icon" /> Twitter
+                    </a>
+                    <a href="https://instagram.com/yourpage" target="_blank" class="social_link">
+                        <img src="images/insta.png" alt="Instagram logo" class="social_icon" /> Instagram
+                    </a>
+                </nav>
+            </div>
+            <div class="footer_bottom">
+                <p>2024 Indian Herbs And Spices. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
